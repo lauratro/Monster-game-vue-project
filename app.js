@@ -67,6 +67,9 @@ const app = Vue.createApp({
       this.monsterHealth -= attackValue;
       this.attackPlayer();
     },
+    surrender() {
+      this.winner = "Monster";
+    },
     healthPlayer() {
       this.currentRound++;
       const healthValue = getRandomValue(10, 20);
